@@ -1,0 +1,22 @@
+﻿@model IndexViewModel;
+
+<html>
+<head>
+    <link href="~/css/site.css" r accesskeyel="stylesheet" />
+</head>
+<body>
+    @foreach (ProductViewModel product in Model.productViewModels)
+    {
+        <div class="card">
+            <img src="data:image;base64,@Convert.ToBase64String(product.Image)" />
+            <h1>@product.Name</h1>
+            <p class="price">$@product.Price</p>
+            <p>@product.Description</p>
+            <p>Voorraad: @product.Stock</p>
+            <p><button>Add to Cart</button></p>
+        </div>
+    }
+
+    <input type="file" name="file" />
+</body>
+</html>

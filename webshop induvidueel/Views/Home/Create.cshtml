@@ -1,0 +1,52 @@
+﻿@model ProductViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<form asp-action="Create" enctype="multipart/form-data">
+    <div>
+        @Html.LabelFor(m => m.Name)
+        @Html.TextBoxFor(m => m.Name)
+    </div>
+    <br />
+
+    <div>
+        @Html.LabelFor(m => m.Price)
+        @Html.TextBoxFor(m => m.Price)
+    </div>
+    <br />
+
+    <div>
+        @Html.LabelFor(m => m.Description)
+        @Html.TextBoxFor(m => m.Description)
+    </div>
+    <br />
+
+    <div>
+        @Html.LabelFor(m => m.Stock)
+        @Html.TextBoxFor(m => m.Stock)
+    </div>
+    <br />
+
+    <div>
+        @Html.LabelFor(m => m.VariationType)
+        @Html.TextBoxFor(m => m.VariationType)
+    </div>
+    <br />
+
+    <div>
+        @Html.LabelFor(m => m.VariationValue)
+        @Html.TextBoxFor(m => m.VariationValue)
+    </div>
+    <br />
+
+    <div>
+        <input type="file" id="image" name="image" accept="image/*" />
+    </div>
+    <br />
+
+    <input type="submit" value="Add product" />
+</form>
